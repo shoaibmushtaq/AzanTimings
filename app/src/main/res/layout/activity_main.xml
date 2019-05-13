@@ -1,18 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.MainActivity">
+    tools:context=".MainActivity"
+    android:background="@layout/relativelayout_custom_create"
+    >
+
+    <TextView
+        android:id="@+id/heading_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Beginning Times"
+        android:textColor="#009688"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        android:textSize="25sp"
+        />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/fajar_textview"
+        android:textSize="16sp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="10dp"
+        android:text="Fajr"
+        android:textStyle="bold"
+        android:layout_below="@+id/heading_textview"
+        android:textColor="#004D40"
+        />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/zuhr_textview"
+        android:textSize="16sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Zuhr"
+        android:textStyle="bold"
+        android:layout_below="@+id/heading_textview"
+        android:layout_toRightOf="@+id/fajar_textview"
+        android:textColor="#004D40"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/asr_textview"
+        android:textSize="16sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Asr"
+        android:textStyle="bold"
+        android:layout_below="@+id/heading_textview"
+        android:layout_toRightOf="@+id/zuhr_textview"
+        android:textColor="#004D40"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/maghrib_textview"
+        android:textSize="16sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Maghrib"
+        android:textStyle="bold"
+        android:layout_below="@+id/heading_textview"
+        android:layout_toRightOf="@+id/asr_textview"
+        android:textColor="#004D40"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/isha_textview"
+        android:textSize="16sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text="Isha"
+        android:textStyle="bold"
+        android:layout_below="@+id/heading_textview"
+        android:layout_toRightOf="@+id/maghrib_textview"
+        android:textColor="#004D40"
+        />
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview"
+        android:scrollbars="vertical"
+        android:layout_below="@+id/fajar_textview"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
+        />
+
+
+
+</RelativeLayout>
