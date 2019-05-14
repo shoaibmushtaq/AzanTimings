@@ -7,10 +7,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitApiClient {
 
     //Declaring Base url of rest Api
-    public static final String BASE_URL = "http://masjidi.co.uk/api/";
+    private static final String BASE_URL = "http://masjidi.co.uk/api/";
 
     //Delaring Retrofit
-    public static Retrofit retrofit = null;
+    private static Retrofit retrofit = null;
 
     //this method will return instance of retrofit
     public static Retrofit getApiClient() {
